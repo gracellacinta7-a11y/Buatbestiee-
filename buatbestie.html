@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Surat Untuk Bestie 💖</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+height:100vh;
+overflow:hidden;
+background:linear-gradient(
+180deg,
+#ffb6d9,
+#ffd6ec,
+#ffe9f5,
+#fff7fc
+);
+}
+
+/* PASSWORD */
+
+#login{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:25px;
+box-shadow:0 0 25px rgba(255,105,180,.3);
+text-align:center;
+width:320px;
+}
+
+h1{
+color:#ff4fa0;
+margin-bottom:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+border-radius:15px;
+border:2px solid pink;
+margin-top:15px;
+}
+
+button{
+margin-top:15px;
+padding:12px 20px;
+border:none;
+border-radius:15px;
+background:#ff77b7;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+/* HALAMAN SURAT */
+
+#suratPage{
+display:none;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+position:relative;
+background:
+linear-gradient(
+180deg,
+#ffb6d9,
+#ffd9ee,
+#fff0f8
+);
+}
+
+/* AWAN */
+
+.cloud{
+position:absolute;
+font-size:40px;
+animation:jalan 15s linear infinite;
+opacity:.8;
+}
+
+.c1{
+top:10%;
+left:-20%;
+}
+
+.c2{
+top:25%;
+left:-30%;
+animation-delay:5s;
+}
+
+@keyframes jalan{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(150vw);
+}
+}
+
+/* HATI */
+
+.heart{
+position:absolute;
+font-size:25px;
+animation:jatuh 8s linear infinite;
+}
+
+@keyframes jatuh{
+from{
+transform:translateY(-120px);
+}
+to{
+transform:translateY(120vh);
+}
+}
+
+/* AMPLOP */
+
+#amplop{
+font-size:100px;
+cursor:pointer;
+animation:naikTurun 2s infinite;
+}
+
+@keyframes naikTurun{
+50%{
+transform:translateY(-10px);
+}
+}
+
+#surat{
+display:none;
+background:white;
+width:90%;
+max-width:600px;
+padding:25px;
+border-radius:25px;
+margin-top:20px;
+box-shadow:0 0 30px rgba(255,105,180,.3);
+animation:muncul .7s;
+}
+
+@keyframes muncul{
+from{
+opacity:0;
+transform:scale(.7);
+}
+to{
+opacity:1;
+transform:scale(1);
+}
+}
+
+#surat h2{
+color:#ff4fa0;
+text-align:center;
+margin-bottom:15px;
+}
+
+#surat p{
+color:#ff66aa;
+font-size:20px;
+text-align:center;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="login">
+
+<div class="card">
+
+<h1>🔐 Password Rahasia 🔐</h1>
+
+<p>Masukkan password duluu 😻</p>
+
+<input id="pw" placeholder="Password">
+
+<button onclick="cek()">
+Buka 💖
+</button>
+
+</div>
+
+</div>
+
+<div id="suratPage">
+
+<div class="cloud c1">☁️ ☁️ ☁️</div>
+<div class="cloud c2">☁️ ☁️ ☁️</div>
+
+<div class="heart" style="left:10%;animation-delay:0s;">💖</div>
+<div class="heart" style="left:25%;animation-delay:2s;">💕</div>
+<div class="heart" style="left:40%;animation-delay:4s;">💗</div>
+<div class="heart" style="left:60%;animation-delay:1s;">💖</div>
+<div class="heart" style="left:80%;animation-delay:3s;">💕</div>
+
+<div id="amplop">
+💌
+</div>
+
+<button onclick="bukaSurat()">
+OPEN SURAT 💖
+</button>
+
+<div id="surat">
+
+<h2>💌 Untuk Bestie 💌</h2>
+
+<p>
+Salah satu hal yang paling beruntung
+di dalam hidupku adalah bertemu
+sahabat yang terbaik sepertimu 🥰💕💕
+<br><br>
+Lopyuuuuu cantik 💖
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function cek(){
+
+let pw =
+document.getElementById("pw").value;
+
+if(pw === "bestieeuuu"){
+
+document.getElementById("login")
+.style.display="none";
+
+document.getElementById("suratPage")
+.style.display="flex";
+
+}else{
+
+alert("Password salah 😭💔");
+
+}
+
+}
+
+function bukaSurat(){
+
+document.getElementById("surat")
+.style.display="block";
+
+}
+
+</script>
+
+</body>
+</html>
